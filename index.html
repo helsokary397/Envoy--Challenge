@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<title>Envoy | Coding Challenge</title>
+	<link rel="stylesheet" href="css/main.css">
+
+
+	<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+	<header>
+		<article>
+			
+			<section class="logo">
+				<img src="images/envoy-logo.png">
+			</section>
+
+				<!-- Nav -->
+				<nav class="nav">
+					<ul class="nav-list">
+						<li class="nav-item"><a href="#">Home</a></li>
+						<li class="nav-item"><a href="#">About</a></li>
+						<li class="nav-item"><a href="#">Services</a></li>
+						<li class="nav-item"><a href="#">Portfolio</a></li>
+						<li class="nav-item"><a href="#">Testimonials</a></li>
+						<li class="nav-item"><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+				<!-- /Nav --> 
+
+			<section class="twitter">
+		
+				<a href="#"><img src="images/twitter.png"></a>
+			</section>
+
+		</article>
+
+	</header>
+	<!--end header-->
+
+
+	<section id="heropanel">
+		<img src="images/django.png">
+	</section>
+	<!--end hero panel-->
+
+
+
+	<section id="content">
+
+			<article>
+				
+				<section class="intro">
+					<h1>An independent full service creative agency helping brave brands build businesses and be heard in a world full of noise. <span>We are Envoy.</span></h1>
+
+					<div class="break">
+					</div>
+
+				</section>
+				<!--end intro-->
+
+			</article>
+			<!--end article 1-->
+
+
+			<article>
+				
+				<section class="featured-work">
+					<h2>Featured Work <a href="#">View All Work</a></h2>
+
+					<div class="break">
+					</div>
+
+				</section>
+				<!--end featured work-->
+
+			</article>	
+			<!--end article 2-->
+
+			<article>
+				<section class="work">
+					<img src="images/boost.png">
+						<h3>Boost Mobile <span>Rebrand</span></h3>
+							
+							<p>Boost Mobile recognized the need to elevate and refresh its brand to speak to a broader audience. The result was an evolved logo, ...</p>
+							
+								<a href="#">View Project</a>
+				</section>
+
+				<section class="work">
+					<img src="images/pear-sports.png">
+						<h3>Pear Sports <span>Training Portal<span></h3>
+							
+							<p>Pear Sports revolutionary training systems and fitness apps were getting lost in a crowded marketplace. Envoy rebuilt the story and ...</p>
+								
+								<a href="#">View Project</a>
+				</section>
+
+				<section class="work">
+					<img src="images/5-11.png">
+						<h3>5.11 <span>Ultimate Training Experience</span></h3>
+							
+							<p>5.11, the industry leader in tactical gear turned to Envoy to bring their “Ultimate Training Challenge” to life in the digital space ...</p>
+								
+								<a href="#">View Project</a>
+				</section>
+				<!--end work-->
+
+			</article>
+			<!--end article 3-->
+
+
+			<article>
+				
+				<section class="featured-work">
+					<h2>Wire<a href="#">View All News</a></h2>
+
+					<div class="break">
+					</div>
+
+				</section>
+				<!--end featured work-->
+
+			</article>	
+			<!--end article 4-->
+
+
+			<article>
+
+				<section class="wire">
+					<a href="#" class="title">The Weinstein Co Lets Envoy Loose on Sin City 2</a>
+						<p class="date">May 1, 2013</p>
+							<a href="#">Read More</a>
+				</section>
+
+				<section class="wire">
+					<a href="#" class="title">The Weinstein Co Lets Envoy Loose on Sin City 2</a>
+						<p class="date">May 1, 2013</p>
+							<a href="#">Read More</a>
+				</section>
+
+				<section class="wire">
+					<a href="#" class="title">The Weinstein Co Lets Envoy Loose on Sin City 2</a>
+						<p class="date">May 1, 2013</p>
+							<a href="#">Read More</a>
+				</section>
+
+			</article>
+
+	</section>
+	<!--end main content-->
+
+	<footer>
+		<article>
+			<section>
+				<a href="http://www.itshesh.com" target="_blank">Developed by Hesham Elsokary</a>
+			</section>
+		</article>
+	</footer>
+
+
+		<script>
+		(function () {
+		
+		    // Create mobile element
+		    var mobile = document.createElement('div');
+		    mobile.className = 'nav-mobile';
+		    document.querySelector('.nav').appendChild(mobile);
+		
+		    // hasClass
+		    function hasClass(elem, className) {
+		        return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		    }
+		
+		    // toggleClass
+		    function toggleClass(elem, className) {
+		        var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+		        if (hasClass(elem, className)) {
+		            while (newClass.indexOf(' ' + className + ' ') >= 0) {
+		                newClass = newClass.replace(' ' + className + ' ', ' ');
+		            }
+		            elem.className = newClass.replace(/^\s+|\s+$/g, '');
+		        } else {
+		            elem.className += ' ' + className;
+		        }
+		    }
+		
+		    // Mobile nav function
+		    var mobileNav = document.querySelector('.nav-mobile');
+		    var toggle = document.querySelector('.nav-list');
+		    mobileNav.onclick = function () {
+		        toggleClass(this, 'nav-mobile-open');
+		        toggleClass(toggle, 'nav-active');
+		    };
+		})();
+		</script>
+
+</body>
+</html>
